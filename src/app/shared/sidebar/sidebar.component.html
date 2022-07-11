@@ -5,8 +5,8 @@
     </h3>
 
     <div class="list-group list-reset">
-        <a href="#" class="list-group-item list-item-action">
-            Dashboard
+        <a *ngFor="let item of historial; let i = index" href="#" class="list-group-item list-item-action">
+            {{ item | titlecase}}
         </a>
     </div>
 </div>
