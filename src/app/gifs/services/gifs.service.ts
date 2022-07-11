@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SearchGifsResponse } from '../interface/gifs.interface';
+import { SearchGifsResponse, Gif } from '../interface/gifs.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class GifsService {
   private apiKey    : string = '3y4MHVHvyhBlZExbX7PGDa3zyUKoiWy8';
   private _historial: string[] = [];
 
-  public resultados: any[] = [];
+  public resultados: Gif[] = [];
 
   get historial(){
     return [...this._historial];
